@@ -119,3 +119,13 @@
         padding: 25px;
     }
 }
+
+.popup.success {
+    background-color: #4CAF50;
+    color: white;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
