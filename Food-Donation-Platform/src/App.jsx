@@ -15,7 +15,7 @@ function App() {
                 <Route path="/donor" element={<Donor />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/ngo-dashboard" element={<Ngodashboard />} />
-                <Route path="/volunteer-dashboard" element={<VolunteerDashboard />} />
+                <Route path="/volunteer-dashboard" element={<Volunteerdashboard />} />
             </Routes>
         </Router>
     );
