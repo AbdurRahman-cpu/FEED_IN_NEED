@@ -20,6 +20,12 @@ function Home() {
     const handleRegister = () => {
         navigate("/register", { state: { role: selectedRole } });
     };
+    const handleDonor = () => {
+        navigate("/donor", { state: { role: selectedRole } });
+    }
+    const handleLogin = () => {
+        navigate("/login", { state: { role: selectedRole } });
+    }
 
     const cards = [
         { title: "Reduce Waste", desc: "Minimizing food wastage." },
@@ -59,7 +65,9 @@ function Home() {
                 <div>
                     {(selectedRole === "ngo" || selectedRole === "volunteer") && (
                         <>
-                            <button className="nav-btn">Login</button>
+                            <button className="nav-btn" onClick={handleLogin}>
+                                Login
+                            </button>
                             <button className="nav-btn" onClick={handleRegister}>
                                 Register
                             </button>
@@ -76,7 +84,7 @@ function Home() {
                     <div className="role-selection">
                         <button
                             className={`role-btn ${selectedRole === "donor" ? "active" : ""}`}
-                            onClick={() => handleRoleSelect("donor")}
+                            onClick={() => handleDonor("Donor")}
                         >
                             I am a Donor
                         </button>
