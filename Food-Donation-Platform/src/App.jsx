@@ -4,7 +4,7 @@ import Register from "./pages/Register.jsx";
 import Login from "./pages/Login.jsx";
 import Donor from "./pages/Donor";
 import Ngodashboard from "./pages/Ngodashboard.jsx";
-import VolunteerDashboard from "./pages/VolunteerDashboard.jsx";
+import Volunteerdashboard from "./pages/Volunteerdashboard.jsx";
 
 function App() {
     return (
