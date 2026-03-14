@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "./NgoDashboard.css";
+import "./Ngodashboard.css";
 import dashboardBg from "../assets/Dashboard.mp4";
 
 const API = "http://localhost:5000";
