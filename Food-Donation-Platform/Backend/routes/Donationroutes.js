@@ -3,18 +3,20 @@ const router = express.Router();
 const db = require('../config/db');
 const nodemailer = require('nodemailer');
 
-// ── Email transporter ──
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: 'abdurrahman11001111111@gmail.com',
-        pass: 'xhkejfaejhfamfjv'  // app password (spaces removed)
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS
+    },
+    tls: {
+        rejectUnauthorized: false
     }
 });
 
 const sendEmail = (to, subject, html) => {
     return transporter.sendMail({
-        from: '"Feed In Need 🍽" <abdurrahman11001111111@gmail.com>',
+        from: `"Feed In Need 🍽" <${process.env.EMAIL_USER}>`,
         to,
         subject,
         html
